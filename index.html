@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Safety & Tracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#register">Sign Up/Log In</a></li>
+                <li><a href="#pet-health">Pet Health Monitoring</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Pet Safety & Tracking</h1>
+        <p>Your pet’s safety is our priority. Learn how we help you track and monitor your pet.</p>
+    </section>
+
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="animation">
+            <img src="qr-belt-demo.gif" alt="QR Belt Demo">
+        </div>
+        <p>Each pet receives a QR-coded belt. If lost, anyone who scans the code can help reunite the pet with its owner.</p>
+    </section>
+
+    <section id="register">
+        <h2>Register Your Pet</h2>
+        <form id="pet-form">
+            <input type="text" id="pet-name" placeholder="Pet's Name" required>
+            <input type="text" id="pet-breed" placeholder="Breed" required>
+            <input type="number" id="pet-age" placeholder="Age" required>
+            <button type="submit">Register Pet</button>
+        </form>
+    </section>
+
+    <section id="lost-pet">
+        <h2>Lost Pet? Notify Us!</h2>
+        <button id="lost-pet-notify">Notify Lost Pet</button>
+        <div id="lost-pet-message"></div>
+    </section>
+
+    <section id="qr-scan">
+        <h2>Scan Pet QR Code</h2>
+        <input type="file" id="qr-upload" accept="image/*">
+        <button id="scan-qr">Scan QR</button>
+        <div id="qr-result"></div>
+    </section>
+
+    <section id="video-call">
+        <h2>Conference Call</h2>
+        <button id="start-call" onclick="startConferenceCall()">Start Conference Call</button>
+        <div id="call-container" style="display:none;">
+            <video id="video" autoplay></video>
+            <button onclick="endConferenceCall()">End Call</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pet Safety & Tracking | Privacy Policy | Contact Us</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
